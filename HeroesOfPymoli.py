@@ -150,7 +150,7 @@ player_demograph["Age Ranges"] = pd.cut(player_demograph["Age"], age_bins, label
 
 # Run calculations for numbers and and percenatages by age group
 age_demo_total = player_demograph["Age Ranges"].value_counts()
-age_demo_percent = (age_demo_totals / total_players) * 100
+age_demo_percent = (age_demo_total / total_players) * 100
 
 # Create dataframe for age demographics
 age_demographics_df = pd.DataFrame({"Percentage of Players": age_demo_percent, "Total Count": age_demo_total})
